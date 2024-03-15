@@ -19,11 +19,14 @@ function Login(){
             alert(Response.data.msg);
          }
          else{
-           
-            let obj = { name:Response.data[0].first_name,lname:Response.data[0].last_name ,email:Response.data[0].mail_id, id:Response.data[0].user_id, mobile:Response.data[0].mobile, add:Response.data[0].address};
+            // console.log(Response.data);
+            sessionStorage.setItem('jwttoken',Response.data.token1);
+            let obj = { name:Response.data.result[0].first_name,lname:Response.data.result[0].last_name ,email:Response.data.result[0].mail_id, id:Response.data.result[0].user_id, mobile:Response.data.result[0].mobile, add:Response.data.result[0].address};
             sessionStorage.setItem("user_data",JSON.stringify(obj));
-            alert("login sucessfull");
-            window.location = "/";
+         
+       
+           alert("login sucessfull");
+           window.location = "/";
          }
         })
 

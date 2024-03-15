@@ -56,7 +56,8 @@ function Singleprod(){
 
 
         const addtocart=(p_id)=>{
-           
+        //     ,headers:{authorization: `sessionStorage.getItem('jwttoken')`
+        // }
             Axios.post("http://localhost:1121/api/addcart",{uid:uid,p_id:p_id}).then((Response)=>{
                
             if(Response.data.msg){

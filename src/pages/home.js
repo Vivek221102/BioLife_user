@@ -63,8 +63,8 @@ function Home(){
             </div>
 
           
-<Container maxWidth="xxl" style={{backgroundColor:"white"}}>
-<h2 style={{backgroundColor:"#477890", padding:"15px", color:"white",opacity:"0.9"}}><center >Our Latest uploaded products</center></h2><br/>
+{/* <Container maxWidth="xxl" style={{backgroundColor:"white"}}>
+<h2 style={{backgroundColor:"#477890", padding:"15px", color:"white",opacity:"0.9"}}><center >Our Best Rated products</center></h2><br/>
           
            
                      <Carousel responsive={responsive}>
@@ -72,10 +72,92 @@ function Home(){
 
                     </Carousel>
            
-</Container>
+</Container> */}
          
             <br/>
-       
+            <div class="container">
+
+<div class="row">
+
+    <div class="col-md-4 col-sm-6  col-xs-12 sm-margin-top-63px xs-margin-top-40px">
+        <div class="advance-product-box">
+            <div class="biolife-title-box biolife-title-box__under-line">
+                <h3 class="title">New Arrivals</h3>
+            </div>
+            <ul class="products-list vertical-layout products-list__vertical-layout">
+            { list.map((val,index)=>{
+                return (
+                    <>
+                    <li class="product-item">
+                    <div class="contain-product contain-product__right-info-layout2 cate">
+                        <div class="product-thumb">
+                            <a href="#" class="link-to-product">
+                            <img src={"http://localhost:1121/public/" +val.p_img } alt="img" width="100" height="100" class="product-thumnail"/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="cat-info"><a class="cat-item" style={{textDecoration:"none",fontSize:"17px"}}>Fresh Fruit</a></div>
+                            <h4 class="product-title"><Link to="" class="pr-name" style={{textDecoration:"none"}}>{val.p_name}</Link></h4>
+                            <div class="price ">
+                                <ins><span class="price-amount"><i class="fa fa-inr" aria-hidden="true"></i>{val.p_price}</span></ins><br/>
+                                <ins><span class="price-amount">Reward: <i class="fa fa-inr" aria-hidden="true"></i>{val.p_ret_price}</span></ins>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                    </>
+                )
+            })
+
+            }
+              
+            </ul>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-12 col-xs-12 sm-margin-top-63px xs-margin-top-80px">
+                        <div class="advance-product-box">
+</div></div>
+
+    <div class="col-md-4 col-sm-6  col-xs-12 sm-margin-top-63px xs-margin-top-80px">
+        <div class="advance-product-box">
+            <div class="biolife-title-box biolife-title-box__under-line">
+                <h3 class="title">Bestseller</h3>
+            </div>
+            <ul class="products-list vertical-layout products-list__vertical-layout">
+            { list.map((val,index)=>{
+                return (
+                    <>
+                    <li class="product-item">
+                    <div class="contain-product contain-product__right-info-layout2 cate">
+                        <div class="product-thumb">
+                            <a href="#" class="link-to-product">
+                            <img src={"http://localhost:1121/public/" +val.p_img } alt="img" width="100" height="100" class="product-thumnail"/>
+                            </a>
+                        </div>
+                        <div class="info">
+                            <div class="cat-info"><a class="cat-item" style={{textDecoration:"none",fontSize:"17px"}}>Fresh Fruit</a></div>
+                            <h4 class="product-title"><Link to="" class="pr-name" style={{textDecoration:"none"}}>{val.p_name}</Link></h4>
+                            <div class="price ">
+                                <ins><span class="price-amount"><i class="fa fa-inr" aria-hidden="true"></i>{val.p_price}</span></ins><br/>
+                                <ins><span class="price-amount">Reward: <i class="fa fa-inr" aria-hidden="true"></i>{val.p_ret_price}</span></ins>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                    </>
+                )
+            })
+
+            }
+            
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+</div>
+
 
             <div className="blog-posts background-fafafa sm-margin-top-33px sm-padding-top-75px sm-padding-bottom-80px xs-margin-top-30px xs-padding-top-30px xs-padding-bottom-50px">
                 <div className="container">

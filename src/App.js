@@ -20,6 +20,7 @@ import Invoice from './pages/invoice';
 import Getreward from './pages/getreward';
 import Forgetpass from './pages/forget';
 import Payment from './pages/checkout';
+import Notfound from './pages/notfound';
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
       <Route exact path='/rewards' element={<Getreward/>}/>
       <Route exact path='/forgetpass' element={<Forgetpass/>}/>
       <Route exact path='/payment' element={<Payment/>}/>
+      <Route path='*' element={<Notfound/>}/>
       </Routes> 
      <Footer/>
      </Router>
